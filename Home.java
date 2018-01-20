@@ -15,6 +15,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import static com.example.quinn.rehabit.R.id.withText;
+
 public class Home extends AppCompatActivity {
 
     @Override
@@ -54,11 +56,15 @@ public class Home extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            TextView testString = (TextView) findViewById(R.id.center_vertical);
-            testString.setText("does this work");
-            return true;
-        }
+        // if (id == R.id.action_settings) {
+
+        //TextView testString = (TextView) findViewById(withText);
+
+        //testString.setText("does this work");
+
+        //return true;
+
+        //}
 
         return super.onOptionsItemSelected(item);
     }
