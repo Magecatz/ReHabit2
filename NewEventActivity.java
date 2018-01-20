@@ -24,7 +24,7 @@ public class NewEventActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
-
     }
+
 
 }
