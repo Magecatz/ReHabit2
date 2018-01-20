@@ -7,9 +7,7 @@ package com.example.quinn.rehabit;
 public class EventObject {
     public String name;
 
-    public scheduledEvent(String name){
+    public EventObject() {
         this.name = name;
     }
-
-
 }
