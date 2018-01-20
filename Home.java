@@ -22,6 +22,7 @@ public class Home extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //should bring up new event window
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
@@ -44,6 +45,8 @@ public class Home extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Snackbar.make(view, "you clicked settings!!! waow", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
             return true;
         }
 
