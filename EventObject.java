@@ -3,9 +3,11 @@ package com.example.quinn.rehabit;
 /**
  * Created by rasu on 1/20/18. and by Sassraka
  *
- * Creates the Object Event object. the underlying backbone of the app, it contains the data that
- * is important to each event and links to the visual interface of the app.
+ * Creates the Object Event object. The underlying backbone of the app, it contains the name, time,
+ * and extra events for each event and links to the visual interface of the app.
  */
+
+import java.util.ArrayList;
 
 public class EventObject {
 
@@ -14,6 +16,7 @@ public class EventObject {
     public boolean subEvents;
     public boolean lights;
     public short temperature;
+    public ArrayList<String> extraEvent = new ArrayList<String>();
 
     //Default; no subevents
     public EventObject(String nm, String tm) {
@@ -24,7 +27,7 @@ public class EventObject {
 
     }
 
-    //Subevents: Change lighting, don't change thermostat
+    //Subevents: Change lighting, don't change thermostat, no extra events
     public EventObject(String nm, String tm, boolean sbEv, boolean lights) {
 
         this.name = nm;
@@ -34,7 +37,7 @@ public class EventObject {
 
     }
 
-    //Subevents: Change thermostat, don't change lights
+    //Subevents: Change thermostat, don't change lights, no extra events
     public EventObject(String nm, String tm, boolean sbEv, short temperature) {
 
         this.name = nm;
@@ -44,7 +47,7 @@ public class EventObject {
 
     }
 
-    //Subevents: Change lighting, Change thermostat
+    //Subevents: Change lighting, Change thermostat, no extra events
     public EventObject(String nm, String tm, boolean sbEv, boolean lights, short temperature) {
 
         this.name = nm;
@@ -52,6 +55,40 @@ public class EventObject {
         this.subEvents = sbEv;
         this.lights = lights;
         this.temperature = temperature;
+
+    }
+
+    //Subevents: Change lighting, don't change thermostat, extra events
+    public EventObject(String nm, String tm, boolean sbEv, boolean lights, ArrayList<String> eventList) {
+
+        this.name = nm;
+        this.time = tm;
+        this.subEvents = sbEv;
+        this.lights= lights;
+        this.extraEvent = eventList;
+
+    }
+
+    //Subevents: Change thermostat, don't change lights, extra events
+    public EventObject(String nm, String tm, boolean sbEv, short temperature, ArrayList<String> eventList) {
+
+        this.name = nm;
+        this.time = tm;
+        this.subEvents = sbEv;
+        this.temperature= temperature;
+        this.extraEvent = eventList;
+
+    }
+
+    //Subevents: Change lighting, Change thermostat, extra events
+    public EventObject(String nm, String tm, boolean sbEv, boolean lights, short temperature, ArrayList<String> eventList) {
+
+        this.name = nm;
+        this.time = tm;
+        this.subEvents = sbEv;
+        this.lights = lights;
+        this.temperature = temperature;
+        this.extraEvent = eventList;
 
     }
 
