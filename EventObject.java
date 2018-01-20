@@ -10,9 +10,10 @@ public class EventObject {
     public String time;
     public boolean subEvents;
     public boolean lights;
-    public boolean thermo;
+    public short temperature;
 
-    public EventObject(String nm, String tm, boolean sbEv) {
+    //Default; no subevents
+    public EventObject(String nm, String tm) {
 
         this.name = nm;
         this.time = tm;
@@ -20,5 +21,31 @@ public class EventObject {
 
     }
 
+    //Subevents: Change lighting, don't change thermostat
+    public EventObject(String nm, String tm, boolean sbEv, boolean lights) {
 
-}
+        this.name = nm;
+        this.time = tm;
+        this.subEvents = sbEv;
+
+    }
+
+    //Subevents: Change thermostat, don't change lights
+    public EventObject(String nm, String tm, boolean sbEv, short thermoTemp) {
+
+        this.name = nm;
+        this.time = tm;
+        this.subEvents = sbEv;
+
+    }
+
+    //Subevents: Change lighting, Change thermostat
+    public EventObject(String nm, String tm, boolean sbEv, boolean lights, short temperature) {
+
+        this.name = nm;
+        this.time = tm;
+        this.subEvents = sbEv;
+
+    }
+
+    }
