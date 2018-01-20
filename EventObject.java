@@ -5,9 +5,16 @@ package com.example.quinn.rehabit;
  */
 
 public class EventObject {
-    public String name;
 
-    public EventObject() {
-        this.name = name;
+    public String name;
+    public String time;
+    public boolean subEvents;
+
+    public EventObject(String nm, String tm, boolean sbEv ) {
+
+        this.name = nm;
+        this.time = tm;
+        this.subEvents = sbEv;
+
     }
 }
