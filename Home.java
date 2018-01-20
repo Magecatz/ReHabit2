@@ -1,6 +1,7 @@
 package com.example.quinn.rehabit;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -24,12 +25,16 @@ public class Home extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //fab.setImageResource(R.drawable.plus);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //should bring up new event window
-                Snackbar.make(view, "why", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(getBaseContext(), NewEventActivity.class);
+                startActivity(intent);
+               //Snackbar.make(view, "why", Snackbar.LENGTH_LONG)
+               //         .setAction("Action", null).show();
             }
         });
     }
