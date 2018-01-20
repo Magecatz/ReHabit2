@@ -28,7 +28,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //should bring up new event window
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "why", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
