@@ -12,6 +12,7 @@ import java.util.*;
 public class EventObject {
 
     public String name;
+    public String day;
     public String time;
     public boolean subEvents;
     public boolean lights;
@@ -19,18 +20,20 @@ public class EventObject {
     public List<String> extraEvent = new ArrayList<String>();
 
     //Default; no subevents
-    public EventObject(String nm, String tm) {
+    public EventObject(String nm, String day, String tm) {
 
         this.name = nm;
+        this.day = day;
         this.time = tm;
 
 
     }
 
     //Subevents: Change lighting, don't change thermostat, no extra events
-    public EventObject(String nm, String tm, boolean sbEv, boolean lights) {
+    public EventObject(String nm, String day, String tm, boolean sbEv, boolean lights) {
 
         this.name = nm;
+        this.day = day;
         this.time = tm;
         this.subEvents = sbEv;
         this.lights= lights;
@@ -38,9 +41,10 @@ public class EventObject {
     }
 
     //Subevents: Change thermostat, don't change lights, no extra events
-    public EventObject(String nm, String tm, boolean sbEv, short temperature) {
+    public EventObject(String nm, String day, String tm, boolean sbEv, short temperature) {
 
         this.name = nm;
+        this.day = day;
         this.time = tm;
         this.subEvents = sbEv;
         this.temperature= temperature;
@@ -48,9 +52,10 @@ public class EventObject {
     }
 
     //Subevents: Change lighting, Change thermostat, no extra events
-    public EventObject(String nm, String tm, boolean sbEv, boolean lights, short temperature) {
+    public EventObject(String nm, String day, String tm, boolean sbEv, boolean lights, short temperature) {
 
         this.name = nm;
+        this.day = day;
         this.time = tm;
         this.subEvents = sbEv;
         this.lights = lights;
@@ -59,9 +64,10 @@ public class EventObject {
     }
 
     //Subevents: Change lighting, don't change thermostat, extra events
-    public EventObject(String nm, String tm, boolean sbEv, boolean lights, List<String> eventList) {
+    public EventObject(String nm, String day, String tm, boolean sbEv, boolean lights, List<String> eventList) {
 
         this.name = nm;
+        this.day = day;
         this.time = tm;
         this.subEvents = sbEv;
         this.lights= lights;
@@ -70,9 +76,10 @@ public class EventObject {
     }
 
     //Subevents: Change thermostat, don't change lights, extra events
-    public EventObject(String nm, String tm, boolean sbEv, short temperature, List<String> eventList) {
+    public EventObject(String nm, String day, String tm, boolean sbEv, short temperature, List<String> eventList) {
 
         this.name = nm;
+        this.day = day;
         this.time = tm;
         this.subEvents = sbEv;
         this.temperature= temperature;
@@ -81,9 +88,10 @@ public class EventObject {
     }
 
     //Subevents: Change lighting, Change thermostat, extra events
-    public EventObject(String nm, String tm, boolean sbEv, boolean lights, short temperature, List<String> eventList) {
+    public EventObject(String nm, String day, String tm, boolean sbEv, boolean lights, short temperature, List<String> eventList) {
 
         this.name = nm;
+        this.day = day;
         this.time = tm;
         this.subEvents = sbEv;
         this.lights = lights;
