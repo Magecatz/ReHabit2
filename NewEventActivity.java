@@ -22,8 +22,7 @@ public class NewEventActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         EditText EventName = (EditText) findViewById(R.id.EventName);
-        String text= EventName.getEditableText().toString();
-        //System.out.print(text);
+        final String text= EventName.getEditableText().toString();
 
         Button DeleteButton = (Button) findViewById(R.id.DeleteButton);
         DeleteButton.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +36,7 @@ public class NewEventActivity extends AppCompatActivity {
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EventObject newEvent = new EventObject(EventName, "mon", "09:30AM", 0, 0, 0, 0);
+                EventObject newEvent = new EventObject(text, "mon", "09:30AM", false, false, false, false);
                 finish();
             }
         });
