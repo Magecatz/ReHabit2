@@ -14,7 +14,6 @@ public class EventObject {
     public String name;
     public String day;
     public String time;
-    public boolean subEvents;
     public boolean lights;
     public boolean temperature;
     public boolean stove;
@@ -32,12 +31,11 @@ public class EventObject {
     }
 */
     //Subevents: Change lighting, don't change thermostat, no extra events
-    public EventObject(String nm, String day, String tm, boolean sbEv, boolean lights, boolean temperature, boolean stove, boolean water) {
+    public EventObject(String nm, String day, String tm, boolean lights, boolean temperature, boolean stove, boolean water) {
 
         this.name = nm;
         this.day = day;
         this.time = tm;
-        this.subEvents = sbEv;
         this.lights= lights;
         this.temperature = temperature;
         this.stove = stove;

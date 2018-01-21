@@ -37,7 +37,7 @@ public class NewEventActivity extends AppCompatActivity {
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EventObject newEvent = new EventObject("2","Mon","09:25AM");
+                EventObject newEvent = new EventObject(EventName, "mon", "09:30AM", 0, 0, 0, 0);
                 finish();
             }
         });
