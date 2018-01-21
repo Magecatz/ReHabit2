@@ -1,7 +1,7 @@
 package com.example.quinn.rehabit;
 
 /**
- * Created by rasu on 1/20/18. and by Sassraka
+ * Created by rasu on 1/20/18. and by Sassraka and by JudeJang7
  *
  * Creates the Object Event object. The underlying backbone of the app, it contains the name, time,
  * and extra events for each event and links to the visual interface of the app.
