@@ -58,7 +58,7 @@ public class Home extends AppCompatActivity {
     public List<List<EventObject>> inputplace(List<List<EventObject>> weekdays,EventObject eo){
         List<String> days = new ArrayList<String>();
         //String tempstring = EventObject.day;
-
+//
 
         return weekdays;
     };

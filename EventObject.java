@@ -99,7 +99,9 @@ public class EventObject {
         this.extraEvent = eventList;
 
     }
-
+    public String days(){
+        return this.day;
+    };
     //returns time as an int
     public int getTime() {
 
