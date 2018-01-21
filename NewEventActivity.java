@@ -69,6 +69,7 @@ public class NewEventActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String days = Home.makedays(Monday.isChecked(), Tuesday.isChecked(), Wednesday.isChecked(), Thursday.isChecked(), Friday.isChecked(), Saturday.isChecked(), Sunday.isChecked());
                 EventObject newEvent = new EventObject(text, days, "09:30AM", Lights.isChecked(), Thermostat.isChecked(), Stove.isChecked(), Water.isChecked());
+                Home.inputplace(newEvent);
 
                 finish();
             }

@@ -23,16 +23,15 @@ import static com.example.quinn.rehabit.R.id.withText;
 
 public class Home extends AppCompatActivity {
 
+    // 0: monday 1:tuesday 2:wed 3: thurs 4:fri 5: sat 6: sun
+    static List<List<EventObject>> weekdays = new ArrayList<List<EventObject>>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // 0: monday 1:tuesday 2:wed 3: thurs 4:fri 5: sat 6: sun
-        List<List<EventObject>> weekdays = new ArrayList<List<EventObject>>();
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         for(int i=0;i<=7;i++){
             // may cause its item to all be the same array
             weekdays.add( new ArrayList<EventObject>());
-
-
         }
 
 
@@ -84,32 +83,32 @@ public class Home extends AppCompatActivity {
         return tempstring;
     }
 
-    public List<List<EventObject>> inputplace(List<List<EventObject>> weekdays,EventObject eo){
+    public static List<List<EventObject>> inputplace(EventObject eo){
 
         String tempstring = eo.days();
         List<String> abvdays = Arrays.asList(tempstring.split(","));
         //String[] abvdays = tempstring.split(",");
         for(int i=0;i <= abvdays.size();i++){
             if(abvdays.get(i)== "Mon"){
-                weekdays.get(0).add(eo);
+                Home.weekdays.get(0).add(eo);
             }
             else if(abvdays.get(i)== "Tue"){
-                weekdays.get(1).add(eo);
+                Home.weekdays.get(1).add(eo);
             }
             else if(abvdays.get(i)== "Wed"){
-                weekdays.get(2).add(eo);
+                Home.weekdays.get(2).add(eo);
             }
             else if(abvdays.get(i)== "Thu"){
-                weekdays.get(3).add(eo);
+                Home.weekdays.get(3).add(eo);
             }
             else if(abvdays.get(i)== "Fri"){
-                weekdays.get(4).add(eo);
+                Home.weekdays.get(4).add(eo);
             }
             else if(abvdays.get(i)== "Sat"){
-                weekdays.get(5).add(eo);
+                Home.weekdays.get(5).add(eo);
             }
             else if(abvdays.get(i)== "Sun"){
-                weekdays.get(6).add(eo);
+                Home.weekdays.get(6).add(eo);
             }
             else continue;
         }
