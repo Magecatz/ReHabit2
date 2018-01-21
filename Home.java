@@ -84,22 +84,22 @@ public class Home extends AppCompatActivity {
     public static String makedays(boolean mon,boolean tue,boolean wed,boolean thu,boolean fri,boolean sat,boolean sun){
         String tempstring="";
         if(mon != false){
-            tempstring += "Mon,";
+            tempstring += "Mon|";
         }
         if(tue != false){
-            tempstring += "Tue,";
+            tempstring += "Tue|";
         }
         if(wed != false){
-            tempstring += "Wed,";
+            tempstring += "Wed|";
         }
         if(thu != false){
-            tempstring += "Thu,";
+            tempstring += "Thu|";
         }
         if(fri != false){
-            tempstring += "Fri,";
+            tempstring += "Fri|";
         }
         if(sat != false){
-            tempstring += "Sat,";
+            tempstring += "Sat|";
         }
         if(sun != false){
             tempstring += "Sun";
@@ -110,33 +110,43 @@ public class Home extends AppCompatActivity {
     public static List<List<EventObject>> inputplace(EventObject eo){
 
         String tempstring = eo.days();
-        List<String> abvdays = Arrays.asList(tempstring.split(","));
-        //String[] abvdays = tempstring.split(",");
-        for(int i=0;i <= abvdays.size();i++){
+        String[] abvdays = tempstring.split("\\|", -1);
 
-            if(abvdays.get(i)== "Mon"){
+   /*     int j = 0;
+        do{
+            String tempday = tempstring.substring(j, j+2);
+            abvdays.add(tempday);
+            j += 4;
+        } while (j <= tempstring.length());*/
+
+        //String[] abvdays = tempstring.split(",");
+        int i=0;
+        do{
+            if(abvdays[i]== "Mon"){
                 Home.weekdays.get(0).add(eo);
             }
-            else if(abvdays.get(i)== "Tue"){
+            else if(abvdays[i]== "Tue"){
                 Home.weekdays.get(1).add(eo);
             }
-            else if(abvdays.get(i)== "Wed"){
+            else if(abvdays[i]== "Wed"){
                 Home.weekdays.get(2).add(eo);
             }
-            else if(abvdays.get(i)== "Thu"){
+            else if(abvdays[i]== "Thu"){
                 Home.weekdays.get(3).add(eo);
             }
-            else if(abvdays.get(i)== "Fri"){
+            else if(abvdays[i]== "Fri"){
                 Home.weekdays.get(4).add(eo);
             }
-            else if(abvdays.get(i)== "Sat"){
+            else if(abvdays[i]== "Sat"){
                 Home.weekdays.get(5).add(eo);
             }
-            else if(abvdays.get(i)== "Sun"){
+            else if(abvdays[i]== "Sun"){
                 Home.weekdays.get(6).add(eo);
             }
             else continue;
-        }
+
+            i++;
+        } while (i <= abvdays.length);
 
 
         return weekdays;

@@ -86,6 +86,9 @@ public class NewEventActivity extends AppCompatActivity {
                         //.setLargeIcon(aBitmap)
                         .getNotification();
 
+                //Snackbar.make(view, text, Snackbar.LENGTH_LONG)
+                //         .setAction("Action", null).show();
+
                 finish();
             }
         });
