@@ -61,25 +61,25 @@ public class Home extends AppCompatActivity {
         List<String> abvdays = Arrays.asList(tempstring.split(","));
         //String[] abvdays = tempstring.split(",");
         for(int i=0;i <= abvdays.size();i++){
-            if(abvdays.get(i)== "mon"){
+            if(abvdays.get(i)== "Mon"){
                 weekdays.get(0).add(eo);
             }
-            else if(abvdays.get(i)== "tue"){
+            else if(abvdays.get(i)== "Tue"){
                 weekdays.get(1).add(eo);
             }
-            else if(abvdays.get(i)== "wed"){
+            else if(abvdays.get(i)== "Wed"){
                 weekdays.get(2).add(eo);
             }
-            else if(abvdays.get(i)== "thu"){
+            else if(abvdays.get(i)== "Thu"){
                 weekdays.get(3).add(eo);
             }
-            else if(abvdays.get(i)== "fri"){
+            else if(abvdays.get(i)== "Fri"){
                 weekdays.get(4).add(eo);
             }
-            else if(abvdays.get(i)== "sat"){
+            else if(abvdays.get(i)== "Sat"){
                 weekdays.get(5).add(eo);
             }
-            else if(abvdays.get(i)== "sun"){
+            else if(abvdays.get(i)== "Sun"){
                 weekdays.get(6).add(eo);
             }
             else continue;
