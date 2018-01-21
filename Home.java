@@ -8,6 +8,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.EventLog;
 import android.view.Display;
 import android.view.View;
 import android.view.Menu;
@@ -33,6 +34,9 @@ public class Home extends AppCompatActivity {
             // may cause its item to all be the same array
             weekdays.add( new ArrayList<EventObject>());
         }
+
+        EventObject testEvent = new EventObject("Wake up", "Mon,", "10:20AM", false, false, true, false);
+        weekdays.get(1).add(testEvent);
 
 
         super.onCreate(savedInstanceState);
