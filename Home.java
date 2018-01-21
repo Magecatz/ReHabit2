@@ -35,6 +35,7 @@ public class Home extends AppCompatActivity {
 
         }
 
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -54,7 +55,13 @@ public class Home extends AppCompatActivity {
             }
         });
     }
+    public List<List<EventObject>> inputplace(List<List<EventObject>> weekdays,EventObject eo){
+        List<String> days = new ArrayList<String>();
+        //String tempstring = EventObject.day;
 
+
+        return weekdays;
+    };
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
