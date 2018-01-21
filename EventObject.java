@@ -7,7 +7,7 @@ package com.example.quinn.rehabit;
  * and extra events for each event and links to the visual interface of the app.
  */
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class EventObject {
 
@@ -16,7 +16,7 @@ public class EventObject {
     public boolean subEvents;
     public boolean lights;
     public short temperature;
-    public ArrayList<String> extraEvent = new ArrayList<String>();
+    public List<String> extraEvent = new ArrayList<String>();
 
     //Default; no subevents
     public EventObject(String nm, String tm) {
@@ -59,7 +59,7 @@ public class EventObject {
     }
 
     //Subevents: Change lighting, don't change thermostat, extra events
-    public EventObject(String nm, String tm, boolean sbEv, boolean lights, ArrayList<String> eventList) {
+    public EventObject(String nm, String tm, boolean sbEv, boolean lights, List<String> eventList) {
 
         this.name = nm;
         this.time = tm;
@@ -70,7 +70,7 @@ public class EventObject {
     }
 
     //Subevents: Change thermostat, don't change lights, extra events
-    public EventObject(String nm, String tm, boolean sbEv, short temperature, ArrayList<String> eventList) {
+    public EventObject(String nm, String tm, boolean sbEv, short temperature, List<String> eventList) {
 
         this.name = nm;
         this.time = tm;
@@ -81,7 +81,7 @@ public class EventObject {
     }
 
     //Subevents: Change lighting, Change thermostat, extra events
-    public EventObject(String nm, String tm, boolean sbEv, boolean lights, short temperature, ArrayList<String> eventList) {
+    public EventObject(String nm, String tm, boolean sbEv, boolean lights, short temperature, List<String> eventList) {
 
         this.name = nm;
         this.time = tm;
