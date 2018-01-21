@@ -54,6 +54,7 @@ public class NewEventActivity extends AppCompatActivity {
         final CheckBox Stove = (CheckBox) findViewById(R.id.Stove);
         final CheckBox Water = (CheckBox) findViewById(R.id.Water);
 
+        /**0CheckBox Notifications = (CheckBox) findViewById(R.id.Notifications);
         /*CheckBox Notifications = (CheckBox) findViewById(R.id.Notifications);
         Notifications.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
             @Override
@@ -68,13 +69,13 @@ public class NewEventActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String days = Home.makedays(Monday.isChecked(), Tuesday.isChecked(), Wednesday.isChecked(), Thursday.isChecked(), Friday.isChecked(), Saturday.isChecked(), Sunday.isChecked());
-                EventObject newEvent = new EventObject(text, days, "09:30AM", Lights.isChecked(), Thermostat.isChecked(), Stove.isChecked(), Water.isChecked());
-                Home.inputplace(newEvent);
+                //EventObject newEvent = new EventObject(text, days, "09:30AM", Lights.isChecked(), Thermostat.isChecked(), Stove.isChecked(), Water.isChecked());
+                //Home.inputplace(newEvent);
 
                 String teststr = text;
                 teststr += Lights.isChecked();
 
-                Snackbar.make(view, text, Snackbar.LENGTH_LONG)
+                Snackbar.make(view, teststr, Snackbar.LENGTH_LONG)
                          .setAction("Action", null).show();
 
                 //finish();
