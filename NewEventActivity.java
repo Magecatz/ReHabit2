@@ -54,13 +54,13 @@ public class NewEventActivity extends AppCompatActivity {
         final CheckBox Stove = (CheckBox) findViewById(R.id.Stove);
         final CheckBox Water = (CheckBox) findViewById(R.id.Water);
 
-        CheckBox Notifications = (CheckBox) findViewById(R.id.Notifications);
+        /*CheckBox Notifications = (CheckBox) findViewById(R.id.Notifications);
         Notifications.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 //todo
             }
-        });
+        });*/
 
 
         Button Submit = (Button) findViewById(R.id.Submit);
@@ -71,7 +71,10 @@ public class NewEventActivity extends AppCompatActivity {
                 EventObject newEvent = new EventObject(text, days, "09:30AM", Lights.isChecked(), Thermostat.isChecked(), Stove.isChecked(), Water.isChecked());
                 Home.inputplace(newEvent);
 
-                finish();
+                Snackbar.make(view, days, Snackbar.LENGTH_LONG)
+                         .setAction("Action", null).show();
+
+                //finish();
             }
         });
 
