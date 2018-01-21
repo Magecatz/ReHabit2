@@ -56,9 +56,35 @@ public class Home extends AppCompatActivity {
         });
     }
     public List<List<EventObject>> inputplace(List<List<EventObject>> weekdays,EventObject eo){
-        List<String> days = new ArrayList<String>();
-        //String tempstring = EventObject.day;
-//
+
+        String tempstring = eo.days();
+        List<String> abvdays = Arrays.asList(tempstring.split(","));
+        //String[] abvdays = tempstring.split(",");
+        for(int i=0;i <= abvdays.size();i++){
+            if(abvdays.get(i)== "mon"){
+                weekdays.get(0).add(eo);
+            }
+            else if(abvdays.get(i)== "tue"){
+                weekdays.get(1).add(eo);
+            }
+            else if(abvdays.get(i)== "wed"){
+                weekdays.get(2).add(eo);
+            }
+            else if(abvdays.get(i)== "thu"){
+                weekdays.get(3).add(eo);
+            }
+            else if(abvdays.get(i)== "fri"){
+                weekdays.get(4).add(eo);
+            }
+            else if(abvdays.get(i)== "sat"){
+                weekdays.get(5).add(eo);
+            }
+            else if(abvdays.get(i)== "sun"){
+                weekdays.get(6).add(eo);
+            }
+            else continue;
+        }
+
 
         return weekdays;
     };
