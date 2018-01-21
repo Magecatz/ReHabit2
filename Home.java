@@ -44,6 +44,19 @@ public class Home extends AppCompatActivity {
 
         EventObject testEvent = new EventObject("Wake up", "Sun,","10:20AM", false, false, true, false);
         weekdays.get(0).add(testEvent);
+        //Context context;
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        /*
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(context);
+                .setSmallIcon(R.drawable.notification_icon)
+                .setContentTitle("My notification")
+                .setContentText("Hello World!");
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        */
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
