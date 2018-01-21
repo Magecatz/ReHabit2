@@ -11,10 +11,10 @@ public class Notifications {
     class NotificationHelper  {
         Context context;
         Notification noti = new Notification.Builder(context)
-                .setContentTitle("Why waste?")
-                .setContentText("Don't forget to check your " + subject)
-                .setSmallIcon(R.drawable.new_mail)
-                .setLargeIcon(aBitmap)
+                .setContentTitle("title")
+                .setContentText("text")
+                //.setSmallIcon(R.drawable.new_mail)
+                //.setLargeIcon(aBitmap)
                 .getNotification();
     }
 }

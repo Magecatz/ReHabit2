@@ -1,5 +1,7 @@
 package com.example.quinn.rehabit;
 
+import android.app.Notification;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -73,13 +75,18 @@ public class NewEventActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String days = Home.makedays(Monday.isChecked(), Tuesday.isChecked(), Wednesday.isChecked(), Thursday.isChecked(), Friday.isChecked(), Saturday.isChecked(), Sunday.isChecked());
-                //EventObject newEvent = new EventObject(text, days, "09:30AM", Lights.isChecked(), Thermostat.isChecked(), Stove.isChecked(), Water.isChecked());
-                //Home.inputplace(newEvent);
+                EventObject newEvent = new EventObject(text, days, "09:30AM", Lights.isChecked(), Thermostat.isChecked(), Stove.isChecked(), Water.isChecked());
+                Home.inputplace(newEvent);
 
-                Snackbar.make(view, text, Snackbar.LENGTH_LONG)
-                         .setAction("Action", null).show();
+                Context context = getApplicationContext();
+                Notification noti = new Notification.Builder(context)
+                        .setContentTitle(text + " event created.")
+                        .setContentText("Reminder set for " + days.substring(0, days.length()-2))
+                        //.setSmallIcon(R.drawable.new_mail)
+                        //.setLargeIcon(aBitmap)
+                        .getNotification();
 
-                //finish();
+                finish();
             }
         });
 
