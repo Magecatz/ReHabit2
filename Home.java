@@ -55,6 +55,31 @@ public class Home extends AppCompatActivity {
             }
         });
     }
+    public  String makedays(boolean mon,boolean tue,boolean wed,boolean thu,boolean fri,boolean sat,boolean sun){
+        String tempstring="";
+        if(mon != false){
+            tempstring += "Mon,";
+        }
+        if(tue != false){
+            tempstring += "Tue,";
+        }
+        if(wed != false){
+            tempstring += "Wed,";
+        }
+        if(thu != false){
+            tempstring += "Thu,";
+        }
+        if(fri != false){
+            tempstring += "Fri,";
+        }
+        if(sat != false){
+            tempstring += "Sat,";
+        }
+        if(sun != false){
+            tempstring += "Sun";
+        }
+        return tempstring;
+    }
     public List<List<EventObject>> inputplace(List<List<EventObject>> weekdays,EventObject eo){
 
         String tempstring = eo.days();
