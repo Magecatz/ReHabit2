@@ -24,6 +24,10 @@ public class NewEventActivity extends AppCompatActivity {
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     public String days;
+    public boolean lightBool = false;
+    public boolean thermBool = false;
+    public boolean stoveBool = false;
+    public boolean waterBool = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,11 +103,52 @@ public class NewEventActivity extends AppCompatActivity {
             }
         });
 
+        CheckBox Lights = (CheckBox) findViewById(R.id.Lights);
+        Lights.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                lightBool = true;
+            }
+        });
+
+        CheckBox Thermostat = (CheckBox) findViewById(R.id.Thermostat);
+        Thermostat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                thermBool = true;
+            }
+        });
+
+        CheckBox Stove = (CheckBox) findViewById(R.id.Stove);
+        Stove.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                stoveBool = true;
+            }
+        });
+
+        CheckBox Water = (CheckBox) findViewById(R.id.Water);
+        Water.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                waterBool = true;
+            }
+        });
+
+        CheckBox Notifications = (CheckBox) findViewById(R.id.Notifications);
+        Notifications.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                //todo
+            }
+        });
+
+
         Button Submit = (Button) findViewById(R.id.Submit);
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EventObject newEvent = new EventObject(text, days, "09:30AM", false, false, false, false);
+                EventObject newEvent = new EventObject(text, days, "09:30AM", lightBool, thermBool, stoveBool, waterBool);
                 finish();
             }
         });
