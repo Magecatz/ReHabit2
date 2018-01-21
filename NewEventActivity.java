@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.*;
 
 public class NewEventActivity extends AppCompatActivity {
 
@@ -15,6 +16,12 @@ public class NewEventActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_event);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        EditText et = (EditText) findViewById(R.id.editText);
+        String text= et.getEditableText().toString();
+
+        Button b = (Button)v;
+        String buttonText = b.getText().toString();
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
