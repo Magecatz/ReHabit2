@@ -33,7 +33,19 @@ public class Home extends AppCompatActivity {
             // may cause its item to all be the same array
             weekdays.add( new ArrayList<EventObject>());
         }
-
+        //Context context;
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        /*
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(context);
+                .setSmallIcon(R.drawable.notification_icon)
+                .setContentTitle("My notification")
+                .setContentText("Hello World!");
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        */
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
