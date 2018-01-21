@@ -16,9 +16,11 @@ public class EventObject {
     public String time;
     public boolean subEvents;
     public boolean lights;
-    public short temperature;
+    public boolean temperature;
+    public boolean stove;
+    public boolean water;
     public List<String> extraEvent = new ArrayList<String>();
-
+/*
     //Default; no subevents
     public EventObject(String nm, String day, String tm) {
 
@@ -28,18 +30,21 @@ public class EventObject {
 
 
     }
-
+*/
     //Subevents: Change lighting, don't change thermostat, no extra events
-    public EventObject(String nm, String day, String tm, boolean sbEv, boolean lights) {
+    public EventObject(String nm, String day, String tm, boolean sbEv, boolean lights, boolean temperature, boolean stove, boolean water) {
 
         this.name = nm;
         this.day = day;
         this.time = tm;
         this.subEvents = sbEv;
         this.lights= lights;
+        this.temperature = temperature;
+        this.stove = stove;
+        this.water = water;
 
     }
-
+/*
     //Subevents: Change thermostat, don't change lights, no extra events
     public EventObject(String nm, String day, String tm, boolean sbEv, short temperature) {
 
@@ -98,7 +103,7 @@ public class EventObject {
         this.temperature = temperature;
         this.extraEvent = eventList;
 
-    }
+    }*/
     public String days(){
         return this.day;
     };
