@@ -92,4 +92,25 @@ public class EventObject {
 
     }
 
+    //returns time as an int
+    public int getTime() {
+
+        String my_string = new String("12:30AM");
+
+        String h = my_string.substring(0, 2);
+        String m = my_string.substring(3, 5);
+        String am_pm = my_string.substring(5, 7);
+
+        int hours = Integer.parseInt(h);
+        int minutes = Integer.parseInt(m);
+
+        if (am_pm == "AM")
+        {
+            return (hours * 60) + minutes;
+        }
+        else
+        {
+            return (12 * hours * 60) + minutes;
+        }
+    }
     }
