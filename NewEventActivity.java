@@ -30,8 +30,10 @@ public class NewEventActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        EditText EventName = (EditText) findViewById(R.id.EventName);
-        final String text = (String) EventName.getText().toString();
+        //EditText EventName = (EditText) findViewById(R.id.EventName);
+        //final String text = (String) EventName.getText().toString();
+
+        final String text = ((EditText)findViewById(R.id.EventName)).getText().toString();
 
         Button DeleteButton = (Button) findViewById(R.id.DeleteButton);
         DeleteButton.setOnClickListener(new View.OnClickListener() {
