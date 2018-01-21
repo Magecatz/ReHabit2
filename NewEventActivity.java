@@ -31,7 +31,7 @@ public class NewEventActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         EditText EventName = (EditText) findViewById(R.id.EventName);
-        final String text= EventName.getEditableText().toString();
+        final String text= EventName.getText().toString();
 
         Button DeleteButton = (Button) findViewById(R.id.DeleteButton);
         DeleteButton.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +71,10 @@ public class NewEventActivity extends AppCompatActivity {
                 EventObject newEvent = new EventObject(text, days, "09:30AM", Lights.isChecked(), Thermostat.isChecked(), Stove.isChecked(), Water.isChecked());
                 Home.inputplace(newEvent);
 
-                Snackbar.make(view, days, Snackbar.LENGTH_LONG)
+                String teststr = text;
+                teststr += Lights.isChecked();
+
+                Snackbar.make(view, text, Snackbar.LENGTH_LONG)
                          .setAction("Action", null).show();
 
                 //finish();
