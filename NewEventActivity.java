@@ -22,6 +22,9 @@ public class NewEventActivity extends AppCompatActivity {
     List<String> timeampm= Arrays.asList("am","pm");
     List<String> dropdown= Arrays.asList("Lights","temperature","Stove/Oven","Water");
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    public String days;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,15 +43,70 @@ public class NewEventActivity extends AppCompatActivity {
             }
         });
 
+        CheckBox Monday = (CheckBox) findViewById(R.id.Monday);
+        Monday.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                days += "Mon,";
+            }
+        });
+
+        CheckBox Tuesday = (CheckBox) findViewById(R.id.Tuesday);
+        Tuesday.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                days += "Tue,";
+            }
+        });
+
+        CheckBox Wednesday = (CheckBox) findViewById(R.id.Wednesday);
+        Wednesday.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                days += "Wed,";
+            }
+        });
+
+        CheckBox Thursday = (CheckBox) findViewById(R.id.Thursday);
+        Thursday.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                days += "Thu,";
+            }
+        });
+
+        CheckBox Friday = (CheckBox) findViewById(R.id.Friday);
+        Friday.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                days += "Fri,";
+            }
+        });
+
+        CheckBox Saturday = (CheckBox) findViewById(R.id.Saturday);
+        Saturday.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                days += "Sat,";
+            }
+        });
+
+        CheckBox Sunday = (CheckBox) findViewById(R.id.Sunday);
+        Sunday.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                days += "Sun,";
+            }
+        });
+
         Button Submit = (Button) findViewById(R.id.Submit);
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EventObject newEvent = new EventObject(text, "mon", "09:30AM", false, false, false, false);
+                EventObject newEvent = new EventObject(text, days, "09:30AM", false, false, false, false);
                 finish();
             }
         });
-
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
