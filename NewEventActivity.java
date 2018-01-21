@@ -11,9 +11,17 @@ import android.view.View;
 import android.widget.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class NewEventActivity extends AppCompatActivity {
-
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    List<String> timeday = Arrays.asList("Mon","Tues","Wed","Thu","Fri","Sat","Sun");
+    List<String> timehours = Arrays.asList("12","11","10","9","8","7","6","5","4","3","2","1") ;
+    List<String> timemins= Arrays.asList("00","05","10","15","20","25","30","35","40","45","50","55");
+    List<String> timeampm= Arrays.asList("am","pm");
+    List<String> dropdown= Arrays.asList("Lights","temperature","Stove/Oven","Water");
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
