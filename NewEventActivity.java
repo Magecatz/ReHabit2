@@ -21,12 +21,11 @@ public class NewEventActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /**EditText et = (EditText) findViewById(R.id.editText);
-        String text= et.getEditableText().toString();
-        System.out.print(text);*/
+        EditText EventName = (EditText) findViewById(R.id.EventName);
+        String text= EventName.getEditableText().toString();
+        //System.out.print(text);
 
         Button DeleteButton = (Button) findViewById(R.id.DeleteButton);
-
         DeleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
