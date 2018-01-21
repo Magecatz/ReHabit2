@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 import org.w3c.dom.Text;
 
@@ -25,6 +25,16 @@ public class Home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // 0: monday 1:tuesday 2:wed 3: thurs 4:fri 5: sat 6: sun
+        List<List<EventObject>> weekdays = new ArrayList<List<EventObject>>();
+
+        for(int i=0;i<=7;i++){
+            // may cause its item to all be the same array
+            weekdays.add( new ArrayList<EventObject>());
+
+
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -72,14 +82,5 @@ public class Home extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-// 0: monday 1:tuesday 2:wed 3: thurs 4:fri 5: sat 6: sun
-    List<List<EventObject>>[] weekdays = new List[7] ;
-    List<EventObject>[] Monday= new ArrayList<EventObject>[];
-    //List<EventObject>[] Tuesday= new List[];
-    //List<EventObject>[] Wednesday= new List;
-    //List<EventObject>[] Thursday = new List;
-    //List<EventObject>[] Friday = new List;
-    //List<EventObject>[] Saterday = new List;
-    //List<EventObject>[] Sunday = new List;
-    weekdays[0];
+
 }
