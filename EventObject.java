@@ -119,11 +119,14 @@ public class EventObject {
 
         if (am_pm == "AM")
         {
-            return (hours * 60) + minutes;
+            if (hours == 12)
+                return minutes;
+            else
+                return (hours * 60) + minutes;
         }
         else
         {
-            return (12 * hours * 60) + minutes;
+            return ((12 + hours) * 60) + minutes;
         }
     }
     }
