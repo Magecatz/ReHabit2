@@ -50,12 +50,15 @@ public class Home extends AppCompatActivity {
                 //should bring up new event window
                 Intent intent = new Intent(getBaseContext(), NewEventActivity.class);
                 startActivity(intent);
+
+
                //Snackbar.make(view, "why", Snackbar.LENGTH_LONG)
                //         .setAction("Action", null).show();
             }
         });
     }
-    public  String makedays(boolean mon,boolean tue,boolean wed,boolean thu,boolean fri,boolean sat,boolean sun){
+
+    public static String makedays(boolean mon,boolean tue,boolean wed,boolean thu,boolean fri,boolean sat,boolean sun){
         String tempstring="";
         if(mon != false){
             tempstring += "Mon,";
@@ -80,6 +83,7 @@ public class Home extends AppCompatActivity {
         }
         return tempstring;
     }
+
     public List<List<EventObject>> inputplace(List<List<EventObject>> weekdays,EventObject eo){
 
         String tempstring = eo.days();
