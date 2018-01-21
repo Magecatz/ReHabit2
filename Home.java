@@ -9,6 +9,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.EventLog;
+import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.Menu;
@@ -17,6 +18,8 @@ import android.widget.TextView;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.w3c.dom.Text;
 
@@ -34,10 +37,27 @@ public class Home extends AppCompatActivity {
             // may cause its item to all be the same array
             weekdays.add( new ArrayList<EventObject>());
         }
+        Calendar cal = Calendar.getInstance();
+        int day = cal.get(Calendar.DAY_OF_WEEK);
+        Date date = cal.getTime();
+        Log.i("hi", Integer.toString(day));
+        Log.i("hi", new SimpleDateFormat("EEEE", Locale.ENGLISH).format(date.getTime()));
 
-        EventObject testEvent = new EventObject("Wake up", "Mon,", "10:20AM", false, false, true, false);
-        weekdays.get(1).add(testEvent);
-
+        EventObject testEvent = new EventObject("Wake up", "Sun,","10:20AM", false, false, true, false);
+        weekdays.get(0).add(testEvent);
+        //Context context ah;
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        /*
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(context);
+                .setSmallIcon(R.drawable.notification_icon)
+                .setContentTitle("My notification")
+                .setContentText("Hello World!");
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        */
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
@@ -93,6 +113,7 @@ public class Home extends AppCompatActivity {
         List<String> abvdays = Arrays.asList(tempstring.split(","));
         //String[] abvdays = tempstring.split(",");
         for(int i=0;i <= abvdays.size();i++){
+
             if(abvdays.get(i)== "Mon"){
                 Home.weekdays.get(0).add(eo);
             }
